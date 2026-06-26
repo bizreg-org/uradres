@@ -321,158 +321,114 @@ const Product = () => {
   );
 };
 
+const PRICING_CONTENT = {
+  ru: {
+    badge: "Тарифы", title: "Выберите подходящий пакет",
+    description: "Прозрачные цены под ключ с НДС, никаких скрытых платежей. Уставный капитал оплачивается отдельно.",
+    popular: "Популярный", vat: "сум", cta: "Запросить консультацию",
+    standard: { title: "Стандарт", for: "Для ООО без НДС", price: "1 190 000", features: ["Регистрация ООО под ключ", "Юридический адрес для регистрации", "Постановка на учёт (e-ijara, Didox)", "Помощь юриста на всех этапах"] },
+    business: { title: "Бизнес", for: "Для ООО на НДС", price: "2 490 000", features: ["Всё из пакета Стандарт", "Регистрация плательщиком НДС", "Юридический адрес 18 м² под НДС", "Сопровождение постановки на учёт по НДС"] },
+    foreign: { title: "Премиум", for: "Иностранное предприятие", price: "от 3 500 000", features: ["Регистрация предприятия с иностранными инвестициями", "Для нерезидентов — удалённо, по доверенности", "Юридический адрес и постановка на учёт"] },
+  },
+  en: {
+    badge: "Plans", title: "Choose the right package",
+    description: "Transparent turnkey prices incl. VAT, no hidden fees. Charter capital is paid separately.",
+    popular: "Popular", vat: "UZS", cta: "Request a consultation",
+    standard: { title: "Standard", for: "For an LLC without VAT", price: "1 190 000", features: ["Turnkey LLC registration", "Legal address for registration", "Tax registration (e-ijara, Didox)", "Lawyer support at every step"] },
+    business: { title: "Business", for: "For an LLC with VAT", price: "2 490 000", features: ["Everything in Standard", "Registration as a VAT payer", "18 m² legal address for VAT", "Support with VAT tax registration"] },
+    foreign: { title: "Premium", for: "Foreign enterprise", price: "from 3 500 000", features: ["Registration of an enterprise with foreign investment", "For non-residents — remotely, by power of attorney", "Legal address and tax registration"] },
+  },
+  kk: {
+    badge: "Тарифтер", title: "Қолайлы пакетті таңдаңыз",
+    description: "Кілтпен ашық бағалар, ҚҚС қосылған, жасырын төлемдерсіз. Жарғылық капитал бөлек төленеді.",
+    popular: "Танымал", vat: "сум", cta: "Кеңес сұрау",
+    standard: { title: "Стандарт", for: "ҚҚС-сіз ЖШС үшін", price: "1 190 000", features: ["ЖШС-ны кілтпен тіркеу", "Тіркеу үшін заңды мекенжай", "Есепке қою (e-ijara, Didox)", "Барлық кезеңде заңгер көмегі"] },
+    business: { title: "Бизнес", for: "ҚҚС төлеуші ЖШС үшін", price: "2 490 000", features: ["Стандарт пакеттегінің бәрі", "ҚҚС төлеуші ретінде тіркеу", "ҚҚС үшін 18 м² заңды мекенжай", "ҚҚС есебіне қоюды сүйемелдеу"] },
+    foreign: { title: "Премиум", for: "Шетелдік кәсіпорын", price: "3 500 000-нан", features: ["Шетел инвестициялары бар кәсіпорынды тіркеу", "Бейрезиденттерге — қашықтан, сенімхат бойынша", "Заңды мекенжай және есепке қою"] },
+  },
+  uz: {
+    badge: "Tariflar", title: "Mos paketni tanlang",
+    description: "Shaffof tan narxlar, QQS bilan, yashirin to'lovlarsiz. Ustav kapitali alohida to'lanadi.",
+    popular: "Mashhur", vat: "so'm", cta: "Konsultatsiya so'rash",
+    standard: { title: "Standart", for: "QQS-siz MChJ uchun", price: "1 190 000", features: ["MChJ-ni kalit topshirish bilan ro'yxatdan o'tkazish", "Ro'yxatdan o'tish uchun yuridik manzil", "Hisobga qo'yish (e-ijara, Didox)", "Barcha bosqichlarda yurist yordami"] },
+    business: { title: "Biznes", for: "QQS to'lovchi MChJ uchun", price: "2 490 000", features: ["Standart paketdagi hammasi", "QQS to'lovchi sifatida ro'yxatdan o'tkazish", "QQS uchun 18 m² yuridik manzil", "QQS hisobiga qo'yishni qo'llab-quvvatlash"] },
+    foreign: { title: "Premium", for: "Xorijiy korxona", price: "3 500 000 dan", features: ["Xorijiy investitsiyali korxonani ro'yxatdan o'tkazish", "Norezidentlar uchun — masofadan, ishonchnoma bo'yicha", "Yuridik manzil va hisobga qo'yish"] },
+  },
+  zh: {
+    badge: "套餐", title: "选择合适的套餐",
+    description: "透明的一站式价格，含增值税，无隐藏费用。注册资本另付。",
+    popular: "热门", vat: "苏姆", cta: "申请咨询",
+    standard: { title: "标准", for: "无增值税有限责任公司", price: "1 190 000", features: ["有限责任公司一站式注册", "注册用法定地址", "税务登记（e-ijara、Didox）", "全程律师协助"] },
+    business: { title: "商业", for: "增值税有限责任公司", price: "2 490 000", features: ["包含标准套餐全部内容", "增值税纳税人注册", "增值税用 18 m² 法定地址", "增值税税务登记支持"] },
+    foreign: { title: "高级", for: "外国企业", price: "3 500 000 起", features: ["外资企业注册", "面向非居民——远程、凭授权书", "法定地址及税务登记"] },
+  },
+} as const;
+
 const Pricing = ({ requestFormHref }: WithRequestFormHref) => {
-  const t = useTranslations("pricing");
-  
+  const locale = useLocale() as keyof typeof PRICING_CONTENT;
+  const c = PRICING_CONTENT[locale] ?? PRICING_CONTENT.ru;
+  const tiers = [
+    { d: c.standard, variant: "plain" as const },
+    { d: c.business, variant: "popular" as const },
+    { d: c.foreign, variant: "premium" as const },
+  ];
   return (
     <section id="pricing" className="py-10 lg:py-14 bg-gradient-to-b from-background to-muted/30 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-brand-500/5 rounded-full blur-[100px]" />
-      
       <div className="container mx-auto px-4 relative">
         <div className="text-center mb-10">
-          <Badge variant="secondary" className="mb-3 text-sm">{t("badge")}</Badge>
-          <h2 className="text-3xl sm:text-4xl font-semibold mb-3 text-foreground">
-            {t("title")}
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-            {t("description")}
-          </p>
+          <Badge variant="secondary" className="mb-3 text-sm">{c.badge}</Badge>
+          <h2 className="text-3xl sm:text-4xl font-semibold mb-3 text-foreground">{c.title}</h2>
+          <p className="text-lg text-muted-foreground max-w-xl mx-auto">{c.description}</p>
         </div>
-        
-        <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
-          {/* Старт */}
-          <Card className="bg-white border-border relative overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all">
-            <CardHeader className="pb-3 pt-5">
-              <div className="flex items-center justify-between mb-3">
-                <Badge variant="secondary" className="bg-emerald-50 text-emerald-700 border-emerald-200">
-                  {t("startTitle")}
-                </Badge>
-                <span className="text-sm text-muted-foreground">3 {t("area")}</span>
-              </div>
-              <div className="mb-1">
-                <span className="text-3xl font-semibold text-foreground">{t("startPrice")}</span>
-                <span className="text-muted-foreground ml-1">{t("startPeriod")}</span>
-              </div>
-              <p className="text-sm text-muted-foreground">{t("startVat")}</p>
-            </CardHeader>
-            <CardContent className="space-y-4 pt-0">
-              <p className="text-muted-foreground text-sm">{t("startDesc")}</p>
-              <ul className="space-y-2.5">
-                {["startFeature1", "startFeature2", "startFeature3"].map((key, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm">
-                    <CheckCircle2 className="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-foreground">{t(key)}</span>
-                  </li>
-                ))}
-                {["startNo1", "startNo2"].map((key, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                    <XCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                    <span>{t(key)}</span>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-            <CardFooter className="pt-0">
-              <Button variant="outline" className="w-full" asChild>
-                <Link href={requestFormHref}>
-                  {t("cta")}
-                </Link>
-              </Button>
-            </CardFooter>
-          </Card>
-          
-          {/* Стандарт */}
-          <Card className="bg-gradient-to-b from-brand-500 to-brand-600 border-brand-400 text-white relative overflow-hidden scale-[1.03] shadow-xl shadow-brand-500/20">
-            <div className="absolute top-0 right-0 w-28 h-28 bg-white/10 rounded-bl-full" />
-            <div className="absolute top-2 left-1/2 -translate-x-1/2 z-10">
-              <Badge className="bg-yellow-400 text-yellow-900 border-0 shadow-md">
-                <Star className="w-4 h-4 mr-1 fill-yellow-900" />
-                {t("popular")}
-              </Badge>
-            </div>
-            <CardHeader className="pb-3 pt-10">
-              <div className="flex items-center justify-between mb-3">
-                <Badge className="bg-white/20 text-white border-white/30">
-                  {t("standardTitle")}
-                </Badge>
-                <span className="text-sm text-brand-100">5 {t("area")}</span>
-              </div>
-              <div className="mb-1">
-                <span className="text-3xl font-semibold">{t("standardPrice")}</span>
-                <span className="text-brand-100 ml-1">{t("startPeriod")}</span>
-              </div>
-              <p className="text-sm text-brand-200">{t("startVat")}</p>
-            </CardHeader>
-            <CardContent className="space-y-4 pt-0">
-              <p className="text-brand-100 text-sm">{t("standardDesc")}</p>
-              <ul className="space-y-2.5">
-                {["standardFeature1", "standardFeature2", "standardFeature3"].map((key, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm">
-                    <CheckCircle2 className="w-5 h-5 text-white flex-shrink-0 mt-0.5" />
-                    <span className="text-white">{t(key)}</span>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-            <CardFooter className="pt-0">
-              <Button className="w-full bg-white text-brand-700 hover:bg-brand-50 font-medium min-w-0" asChild>
-                <Link href={requestFormHref} className="inline-flex items-center justify-center gap-2">
-                  <span className="whitespace-nowrap flex-shrink-0">{t("cta")}</span>
-                  <ArrowRight className="ml-2 w-4 h-4 flex-shrink-0" />
-                </Link>
-              </Button>
-            </CardFooter>
-          </Card>
-          
-          {/* Бизнес */}
-          <Card className="bg-white border-border relative overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all">
-            <div className="absolute top-0 right-0 w-24 h-24 bg-yellow-500/10 rounded-bl-full" />
-            <CardHeader className="pb-3 pt-5">
-              <div className="flex items-center justify-between mb-3">
-                <Badge variant="secondary" className="bg-amber-50 text-amber-700 border-amber-200">
-                  <Trophy className="w-4 h-4 mr-1" />
-                  {t("businessTitle")}
-                </Badge>
-                <span className="text-sm text-muted-foreground">18 {t("area")}</span>
-              </div>
-              <div className="mb-1">
-                <span className="text-3xl font-semibold text-foreground">{t("businessPrice")}</span>
-                <span className="text-muted-foreground ml-1">{t("startPeriod")}</span>
-              </div>
-              <p className="text-sm text-brand-600 font-medium">{t("businessVat")}</p>
-            </CardHeader>
-            <CardContent className="space-y-4 pt-0">
-              <p className="text-muted-foreground text-sm">{t("businessDesc")}</p>
-              <ul className="space-y-2.5">
-                {["businessFeature1", "businessFeature2", "businessFeature3"].map((key, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm">
-                    <CheckCircle2 className="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-foreground">{t(key)}</span>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-            <CardFooter className="pt-0">
-              <Button variant="outline" className="w-full" asChild>
-                <Link href={requestFormHref}>
-                  {t("cta")}
-                </Link>
-              </Button>
-            </CardFooter>
-          </Card>
-        </div>
-        
-        <div className="mt-10 text-center">
-          <div className="inline-flex flex-wrap justify-center gap-6 p-5 rounded-xl bg-brand-50 border border-brand-100">
-            <div className="flex items-center gap-2 text-sm text-brand-800">
-              <CheckCircle2 className="w-5 h-5 text-brand-500" />
-              <span>{t("discount1")}</span>
-            </div>
-            <div className="flex items-center gap-2 text-sm text-brand-800">
-              <CheckCircle2 className="w-5 h-5 text-brand-500" />
-              <span>{t("discount2")}</span>
-            </div>
-          </div>
+        <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto items-start">
+          {tiers.map((t, idx) => {
+            const popular = t.variant === "popular";
+            return (
+              <Card key={idx} className={popular
+                ? "bg-gradient-to-b from-brand-500 to-brand-600 border-brand-400 text-white relative overflow-hidden md:scale-[1.03] shadow-xl shadow-brand-500/20"
+                : "bg-white border-border relative overflow-hidden hover:border-brand-300 hover:shadow-lg transition-all"}>
+                {popular && (
+                  <div className="absolute top-2 left-1/2 -translate-x-1/2 z-10">
+                    <Badge className="bg-yellow-400 text-yellow-900 border-0 shadow-md"><Star className="w-4 h-4 mr-1 fill-yellow-900" />{c.popular}</Badge>
+                  </div>
+                )}
+                <CardHeader className={popular ? "pb-3 pt-10" : "pb-3 pt-5"}>
+                  <Badge variant="secondary" className={popular
+                    ? "bg-white/20 text-white border-white/30 mb-3 w-fit"
+                    : (t.variant === "premium" ? "bg-amber-50 text-amber-700 border-amber-200 mb-3 w-fit" : "bg-emerald-50 text-emerald-700 border-emerald-200 mb-3 w-fit")}>
+                    {t.variant === "premium" && <Trophy className="w-4 h-4 mr-1" />}{t.d.title}
+                  </Badge>
+                  <p className={`text-sm mb-2 ${popular ? "text-brand-100" : "text-muted-foreground"}`}>{t.d.for}</p>
+                  <div className="flex items-baseline gap-1.5">
+                    <span className="text-3xl font-semibold">{t.d.price}</span>
+                    <span className={`text-sm ${popular ? "text-brand-100" : "text-muted-foreground"}`}>{c.vat}</span>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-3 pt-0">
+                  <ul className="space-y-2.5">
+                    {t.d.features.map((f, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm">
+                        <CheckCircle2 className={`w-5 h-5 flex-shrink-0 mt-0.5 ${popular ? "text-white" : "text-brand-500"}`} />
+                        <span className={popular ? "text-white" : "text-foreground"}>{f}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+                <CardFooter className="pt-0">
+                  {popular ? (
+                    <Button className="w-full rounded-full bg-white text-brand-700 hover:bg-brand-50 font-medium" asChild>
+                      <Link href={requestFormHref} className="inline-flex items-center justify-center gap-2"><span className="whitespace-nowrap">{c.cta}</span><ArrowRight className="ml-1 w-4 h-4" /></Link>
+                    </Button>
+                  ) : (
+                    <Button variant="outline" className="w-full rounded-full" asChild>
+                      <Link href={requestFormHref}>{c.cta}</Link>
+                    </Button>
+                  )}
+                </CardFooter>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>
