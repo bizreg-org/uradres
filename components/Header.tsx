@@ -98,10 +98,10 @@ export function Header() {
             </div>
 
             <a 
-              href="tel:+998903478692" 
+              href="tel:+998770178978" 
               className="text-foreground hover:text-brand-500 transition-colors text-sm hidden xl:block"
             >
-              +998 90 347 86 92
+              +998 77 017 89 78
             </a>
             <Button size="sm" className="bg-gradient-brand" asChild>
               <Link href={requestFormHref}>
@@ -175,10 +175,10 @@ export function Header() {
                 </Link>
               ))}
               <a 
-                href="tel:+998903478692" 
+                href="tel:+998770178978" 
                 className="text-brand-500 font-medium"
               >
-                +998 90 347 86 92
+                +998 77 017 89 78
               </a>
               <Button size="sm" className="bg-gradient-brand w-fit" asChild>
                 <Link href={requestFormHref}>
