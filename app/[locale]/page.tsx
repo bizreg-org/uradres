@@ -31,7 +31,6 @@ import {
   Send,
   Star,
   Building,
-  Trophy
 } from "lucide-react";
 
 type WithRequestFormHref = { requestFormHref: string };
@@ -323,44 +322,44 @@ const Product = () => {
 
 const PRICING_CONTENT = {
   ru: {
-    badge: "Тарифы", title: "Выберите подходящий пакет",
-    description: "Прозрачные цены под ключ с НДС, никаких скрытых платежей. Уставный капитал оплачивается отдельно.",
-    popular: "Популярный", vat: "сум", cta: "Запросить консультацию",
-    standard: { title: "Стандарт", for: "Для ООО без НДС", price: "1 190 000", features: ["Регистрация ООО под ключ", "Юридический адрес для регистрации", "Постановка на учёт (e-ijara, Didox)", "Помощь юриста на всех этапах"] },
-    business: { title: "Бизнес", for: "Для ООО на НДС", price: "2 490 000", features: ["Всё из пакета Стандарт", "Регистрация плательщиком НДС", "Юридический адрес 18 м² под НДС", "Сопровождение постановки на учёт по НДС"] },
-    foreign: { title: "Премиум", for: "Иностранное предприятие", price: "от 3 500 000", features: ["Регистрация предприятия с иностранными инвестициями", "Для нерезидентов — удалённо, по доверенности", "Юридический адрес и постановка на учёт"] },
+    badge: "Тарифы", title: "Юридический адрес: выберите пакет",
+    description: "Цена в месяц, зависит от формы бизнеса и налогового режима. Никаких скрытых платежей.",
+    popular: "Популярный", vat: "сум/мес", cta: "Запросить консультацию",
+    standard: { title: "ИП", for: "Для индивидуальных предпринимателей", price: "1 000 000", deposit: "Депозит 3 000 000 сум", features: ["Площадь 3 м²", "Договор аренды и регистрация в e-ijara", "Регистрация в Didox", "Приём и пересылка почты"] },
+    business: { title: "ООО на УСН", for: "Для ООО на упрощённом режиме", price: "1 272 000", deposit: "Депозит 3 000 000 сум", features: ["Площадь 5 м²", "Всё из пакета ИП", "Выделенный представитель с 10:00 до 20:00", "Помощь с подтверждением адреса для банка"] },
+    foreign: { title: "ООО на НДС", for: "Для ООО — плательщиков НДС", price: "2 544 000", deposit: "Депозит 7 000 000 сум", features: ["Площадь 18 м² — соответствует требованиям для учёта по НДС", "Всё из пакета ООО на УСН", "Сопровождение постановки на учёт по НДС", "Поддержка при запросах налоговой"] },
   },
   en: {
-    badge: "Plans", title: "Choose the right package",
-    description: "Transparent turnkey prices incl. VAT, no hidden fees. Charter capital is paid separately.",
-    popular: "Popular", vat: "UZS", cta: "Request a consultation",
-    standard: { title: "Standard", for: "For an LLC without VAT", price: "1 190 000", features: ["Turnkey LLC registration", "Legal address for registration", "Tax registration (e-ijara, Didox)", "Lawyer support at every step"] },
-    business: { title: "Business", for: "For an LLC with VAT", price: "2 490 000", features: ["Everything in Standard", "Registration as a VAT payer", "18 m² legal address for VAT", "Support with VAT tax registration"] },
-    foreign: { title: "Premium", for: "Foreign enterprise", price: "from 3 500 000", features: ["Registration of an enterprise with foreign investment", "For non-residents — remotely, by power of attorney", "Legal address and tax registration"] },
+    badge: "Plans", title: "Legal address: choose a package",
+    description: "Monthly price, depends on your business form and tax regime. No hidden fees.",
+    popular: "Popular", vat: "UZS/month", cta: "Request a consultation",
+    standard: { title: "Sole proprietor", for: "For individual entrepreneurs", price: "1,000,000", deposit: "Deposit 3,000,000 UZS", features: ["Area: 3 m²", "Lease agreement and e-ijara registration", "Didox registration", "Mail receiving and forwarding"] },
+    business: { title: "LLC, simplified tax", for: "For LLCs on the simplified regime", price: "1,272,000", deposit: "Deposit 3,000,000 UZS", features: ["Area: 5 m²", "Everything in the Sole proprietor package", "Dedicated representative from 10:00 to 20:00", "Help confirming the address for the bank"] },
+    foreign: { title: "LLC with VAT", for: "For VAT-paying LLCs", price: "2,544,000", deposit: "Deposit 7,000,000 UZS", features: ["Area: 18 m² — meets the requirements for VAT registration", "Everything in the simplified-tax package", "Support with VAT tax registration", "Support with tax authority requests"] },
   },
   kk: {
-    badge: "Тарифтер", title: "Қолайлы пакетті таңдаңыз",
-    description: "Кілтпен ашық бағалар, ҚҚС қосылған, жасырын төлемдерсіз. Жарғылық капитал бөлек төленеді.",
-    popular: "Танымал", vat: "сум", cta: "Кеңес сұрау",
-    standard: { title: "Стандарт", for: "ҚҚС-сіз ЖШС үшін", price: "1 190 000", features: ["ЖШС-ны кілтпен тіркеу", "Тіркеу үшін заңды мекенжай", "Есепке қою (e-ijara, Didox)", "Барлық кезеңде заңгер көмегі"] },
-    business: { title: "Бизнес", for: "ҚҚС төлеуші ЖШС үшін", price: "2 490 000", features: ["Стандарт пакеттегінің бәрі", "ҚҚС төлеуші ретінде тіркеу", "ҚҚС үшін 18 м² заңды мекенжай", "ҚҚС есебіне қоюды сүйемелдеу"] },
-    foreign: { title: "Премиум", for: "Шетелдік кәсіпорын", price: "3 500 000-нан", features: ["Шетел инвестициялары бар кәсіпорынды тіркеу", "Бейрезиденттерге — қашықтан, сенімхат бойынша", "Заңды мекенжай және есепке қою"] },
+    badge: "Тарифтер", title: "Заңды мекенжай: пакетті таңдаңыз",
+    description: "Айлық баға, бизнес нысаны мен салық режиміне байланысты. Жасырын төлемдер жоқ.",
+    popular: "Танымал", vat: "сум/ай", cta: "Кеңес сұрату",
+    standard: { title: "ЖК", for: "Жеке кәсіпкерлер үшін", price: "1 000 000", deposit: "Депозит 3 000 000 сум", features: ["Ауданы 3 м²", "Жалдау шарты және e-ijara тіркеуі", "Didox тіркеуі", "Поштаны қабылдау және қайта жіберу"] },
+    business: { title: "ЖШС, жеңілдетілген", for: "Жеңілдетілген режимдегі ЖШС үшін", price: "1 272 000", deposit: "Депозит 3 000 000 сум", features: ["Ауданы 5 м²", "ЖК пакетіндегінің бәрі", "10:00-ден 20:00-ге дейін арнаулы өкіл", "Банк үшін мекенжайды растауға көмек"] },
+    foreign: { title: "ЖШС, ҚҚС", for: "ҚҚС төлейтін ЖШС үшін", price: "2 544 000", deposit: "Депозит 7 000 000 сум", features: ["Ауданы 18 м² — ҚҚС есебінің талаптарына сай", "Жеңілдетілген пакеттегінің бәрі", "ҚҚС есебіне қоюды сүйемелдеу", "Салық сұрауларында қолдау"] },
   },
   uz: {
-    badge: "Tariflar", title: "Mos paketni tanlang",
-    description: "Shaffof tan narxlar, QQS bilan, yashirin to'lovlarsiz. Ustav kapitali alohida to'lanadi.",
-    popular: "Mashhur", vat: "so'm", cta: "Konsultatsiya so'rash",
-    standard: { title: "Standart", for: "QQS-siz MChJ uchun", price: "1 190 000", features: ["MChJ-ni kalit topshirish bilan ro'yxatdan o'tkazish", "Ro'yxatdan o'tish uchun yuridik manzil", "Hisobga qo'yish (e-ijara, Didox)", "Barcha bosqichlarda yurist yordami"] },
-    business: { title: "Biznes", for: "QQS to'lovchi MChJ uchun", price: "2 490 000", features: ["Standart paketdagi hammasi", "QQS to'lovchi sifatida ro'yxatdan o'tkazish", "QQS uchun 18 m² yuridik manzil", "QQS hisobiga qo'yishni qo'llab-quvvatlash"] },
-    foreign: { title: "Premium", for: "Xorijiy korxona", price: "3 500 000 dan", features: ["Xorijiy investitsiyali korxonani ro'yxatdan o'tkazish", "Norezidentlar uchun — masofadan, ishonchnoma bo'yicha", "Yuridik manzil va hisobga qo'yish"] },
+    badge: "Tariflar", title: "Yuridik manzil: paketni tanlang",
+    description: "Oylik narx, biznes shakli va soliq rejimiga bog'liq. Yashirin to'lovlar yo'q.",
+    popular: "Ommabop", vat: "so'm/oy", cta: "Konsultatsiya so'rash",
+    standard: { title: "YaTT", for: "Yakka tartibdagi tadbirkorlar uchun", price: "1 000 000", deposit: "Depozit 3 000 000 so'm", features: ["Maydoni 3 m²", "Ijara shartnomasi va e-ijara ro'yxati", "Didox ro'yxati", "Pochtani qabul qilish va yuborish"] },
+    business: { title: "MChJ, soddalashtirilgan", for: "Soddalashtirilgan rejimdagi MChJ uchun", price: "1 272 000", deposit: "Depozit 3 000 000 so'm", features: ["Maydoni 5 m²", "YaTT paketidagi hammasi", "10:00 dan 20:00 gacha maxsus vakil", "Bank uchun manzilni tasdiqlashda yordam"] },
+    foreign: { title: "MChJ, QQS", for: "QQS to'lovchi MChJ uchun", price: "2 544 000", deposit: "Depozit 7 000 000 so'm", features: ["Maydoni 18 m² — QQS hisobi talablariga mos", "Soddalashtirilgan paketdagi hammasi", "QQS hisobiga qo'yishni qo'llab-quvvatlash", "Soliq so'rovlarida yordam"] },
   },
   zh: {
-    badge: "套餐", title: "选择合适的套餐",
-    description: "透明的一站式价格，含增值税，无隐藏费用。注册资本另付。",
-    popular: "热门", vat: "苏姆", cta: "申请咨询",
-    standard: { title: "标准", for: "无增值税有限责任公司", price: "1 190 000", features: ["有限责任公司一站式注册", "注册用法定地址", "税务登记（e-ijara、Didox）", "全程律师协助"] },
-    business: { title: "商业", for: "增值税有限责任公司", price: "2 490 000", features: ["包含标准套餐全部内容", "增值税纳税人注册", "增值税用 18 m² 法定地址", "增值税税务登记支持"] },
-    foreign: { title: "高级", for: "外国企业", price: "3 500 000 起", features: ["外资企业注册", "面向非居民——远程、凭授权书", "法定地址及税务登记"] },
+    badge: "资费", title: "法定地址：选择套餐",
+    description: "按月计价，取决于企业形式和税务模式。无任何隐藏费用。",
+    popular: "热门", vat: "苏姆/月", cta: "咨询顾问",
+    standard: { title: "个体工商户", for: "面向个体经营者", price: "1 000 000", deposit: "押金 3 000 000 苏姆", features: ["面积 3 m²", "租赁合同及 e-ijara 登记", "Didox 登记", "邮件代收与转寄"] },
+    business: { title: "简易税制公司", for: "面向简易税制有限责任公司", price: "1 272 000", deposit: "押金 3 000 000 苏姆", features: ["面积 5 m²", "包含个体工商户套餐全部内容", "10:00–20:00 专属代表", "协助向银行确认地址"] },
+    foreign: { title: "增值税公司", for: "面向增值税纳税公司", price: "2 544 000", deposit: "押金 7 000 000 苏姆", features: ["面积 18 m²——符合增值税登记要求", "包含简易税制套餐全部内容", "增值税税务登记支持", "税务问询支持"] },
   },
 } as const;
 
@@ -370,7 +369,7 @@ const Pricing = ({ requestFormHref }: WithRequestFormHref) => {
   const tiers = [
     { d: c.standard, variant: "plain" as const },
     { d: c.business, variant: "popular" as const },
-    { d: c.foreign, variant: "premium" as const },
+    { d: c.foreign, variant: "plain" as const },
   ];
   return (
     <section id="pricing" className="py-10 lg:py-14 bg-gradient-to-b from-background to-muted/30 relative overflow-hidden">
@@ -396,14 +395,15 @@ const Pricing = ({ requestFormHref }: WithRequestFormHref) => {
                 <CardHeader className={popular ? "pb-3 pt-10" : "pb-3 pt-5"}>
                   <Badge variant="secondary" className={popular
                     ? "bg-white/20 text-white border-white/30 mb-3 w-fit"
-                    : (t.variant === "premium" ? "bg-amber-50 text-amber-700 border-amber-200 mb-3 w-fit" : "bg-emerald-50 text-emerald-700 border-emerald-200 mb-3 w-fit")}>
-                    {t.variant === "premium" && <Trophy className="w-4 h-4 mr-1" />}{t.d.title}
+                    : "bg-emerald-50 text-emerald-700 border-emerald-200 mb-3 w-fit"}>
+                    {t.d.title}
                   </Badge>
                   <p className={`text-sm mb-2 ${popular ? "text-brand-100" : "text-muted-foreground"}`}>{t.d.for}</p>
                   <div className="flex items-baseline gap-1.5">
                     <span className="text-3xl font-semibold">{t.d.price}</span>
                     <span className={`text-sm ${popular ? "text-brand-100" : "text-muted-foreground"}`}>{c.vat}</span>
                   </div>
+                  <p className={`text-sm mt-1 tabular-nums ${popular ? "text-brand-100" : "text-muted-foreground"}`}>{t.d.deposit}</p>
                 </CardHeader>
                 <CardContent className="space-y-3 pt-0">
                   <ul className="space-y-2.5">
